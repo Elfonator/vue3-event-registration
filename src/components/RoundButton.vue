@@ -10,7 +10,7 @@
 <script setup>
 const variants = {
   default: 'border border-gray-200 hover:bg-gray-100',
-  danger: 'bg-red-300 enabled:hover:bg-red-100 text-red-900',
+  danger: 'bg-red-200 enabled:hover:bg-red-100 text-red-900',
 };
 defineProps({
   variant: {

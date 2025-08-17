@@ -38,10 +38,10 @@
       "status": "confirmed"
     },
     {
-      "id": "1755381850908",
+      "id": "1755419988823",
       "userId": 1,
-      "eventId": "1",
-      "eventTitle": "Rails Conference 2024",
+      "eventId": "4",
+      "eventTitle": "Rust Conference 2021",
       "status": "confirmed"
     }
   ]

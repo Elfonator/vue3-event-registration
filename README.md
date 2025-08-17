@@ -1,35 +1,48 @@
-# event-booking
+# Event Registration (Vue 3)
 
-This template should help get you started developing with Vue 3 in Vite.
+Small learning project: an event booking app built with Vue 3 (Composition API).
+It showcases optimistic UI, error handling with retry, and shared state via a composable.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Optimistic booking (pending → confirmed) with rollback on failure
+- Duplicate-registration guard per user/event
+- `useBookings()` composable to share state/actions
+- Empty and error states + “Retry” action
+- Responsive UI with Tailwind; Lucide icons (dynamic spinner/check)
 
-## Customize configuration
+## Tech
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Vue 3 + Vite, Composition API, Tailwind CSS, lucide-vue-next, Fetch API.
 
-## Project Setup
+## Getting started
 
-```sh
+1. **Install**
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+2. **Mock API (JSON server)**
 
-```sh
+```bash
+npm install --save-dev json-server
+npx json-server --watch db.json --port 3001
+# Example db.json:
+# {
+#   "events": [     {
+#     "id": "2",
+#     "title": "Vue Conference 2024",
+#     "date": "2024-05-20",
+#     "description": "Join us for a day of insightful talks and networking with industry leaders in technology.",
+#     "location": "Convention Center, Downtown"
+#    }],
+#   "bookings": []
+# }
+```
+
+3. **\*Run the app**
+
+```bash
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
